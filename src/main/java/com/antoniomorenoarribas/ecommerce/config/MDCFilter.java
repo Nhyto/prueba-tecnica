@@ -14,10 +14,10 @@ import org.slf4j.MDC;
 
 public class MDCFilter implements Filter {
 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-    	throw new UnsupportedOperationException("El método init no está implementado.");	
-    }
+	 @Override
+	    public void init(FilterConfig filterConfig) throws ServletException {
+	        System.out.println("MDCFilter initialized");
+	    }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -37,6 +37,6 @@ public class MDCFilter implements Filter {
 
     @Override
     public void destroy() {
-    	 throw new UnsupportedOperationException("El método destroy no está implementado.");
+        System.out.println("MDCFilter destroyed");
     }
 }
