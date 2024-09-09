@@ -48,7 +48,7 @@ class GetPriceCaseTest {
             getPriceCase.getFinalPrice(emptyPrices);
         });
 
-        assertEquals("No price available for this product and brand", exception.getMessage());
+        assertEquals("No hay precios disponibles para este producto y marca.", exception.getMessage());
     }
     
     @Test

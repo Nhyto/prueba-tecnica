@@ -26,7 +26,7 @@ import com.antoniomorenoarribas.ecommerce.infrastructure.database.entities.Brand
 import com.antoniomorenoarribas.ecommerce.infrastructure.database.entities.PriceEntity;
 import com.antoniomorenoarribas.ecommerce.infrastructure.database.entities.ProductEntity;
 
-public class JpaPriceRepositoryTest {
+class JpaPriceRepositoryTest {
 	
 	@Mock
     private SpringDataPriceRepository springDataPriceRepository;

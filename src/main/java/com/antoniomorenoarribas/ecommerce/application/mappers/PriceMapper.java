@@ -3,7 +3,7 @@ package com.antoniomorenoarribas.ecommerce.application.mappers;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import com.antoniomorenoarribas.ecommerce.application.dto.responseDTO.PriceResponseDTO;
+import com.antoniomorenoarribas.ecommerce.application.dto.responsedto.PriceResponseDTO;
 import com.antoniomorenoarribas.ecommerce.domain.model.Price;
 import com.antoniomorenoarribas.ecommerce.infrastructure.database.entities.PriceEntity;
 

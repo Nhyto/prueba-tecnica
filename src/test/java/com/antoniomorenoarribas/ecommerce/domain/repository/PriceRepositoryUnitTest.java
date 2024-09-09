@@ -37,7 +37,7 @@ class PriceRepositoryUnitTest {
 	        LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0);
 
 	        List<Price> mockPrices = new ArrayList<>();
-	        mockPrices.add(createMockPrice(productId, brandId, applicationDate, new BigDecimal("35.50"), 0));
+	        mockPrices.add(createMockPrice(productId, brandId, new BigDecimal("35.50"), 0));
 
 	        when(priceRepository.findApplicablePrices(productId, brandId, applicationDate))
 	            .thenReturn(mockPrices);
@@ -70,7 +70,7 @@ class PriceRepositoryUnitTest {
 
 	 
 	// Método auxiliar para crear objetos Price
-	    private Price createMockPrice(Long productId, Long brandId, LocalDateTime applicationDate, BigDecimal priceValue, int priority) {
+	    private Price createMockPrice(Long productId, Long brandId, BigDecimal priceValue, int priority) {
 	        Price price = new Price();
 	        price.setProductId(productId);
 	        price.setBrandId(brandId);

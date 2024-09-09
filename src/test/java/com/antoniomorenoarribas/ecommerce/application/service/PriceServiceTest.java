@@ -3,7 +3,6 @@ package com.antoniomorenoarribas.ecommerce.application.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyList;
@@ -24,8 +23,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.slf4j.MDC;
 
-import com.antoniomorenoarribas.ecommerce.application.dto.requestDTO.PriceRequestDTO;
-import com.antoniomorenoarribas.ecommerce.application.dto.responseDTO.PriceResponseDTO;
+import com.antoniomorenoarribas.ecommerce.application.dto.requestdto.PriceRequestDTO;
+import com.antoniomorenoarribas.ecommerce.application.dto.responsedto.PriceResponseDTO;
+import com.antoniomorenoarribas.ecommerce.application.exceptions.PriceNotFoundException;
 import com.antoniomorenoarribas.ecommerce.application.mappers.PriceMapper;
 import com.antoniomorenoarribas.ecommerce.domain.model.Price;
 import com.antoniomorenoarribas.ecommerce.domain.repository.PriceRepository;
@@ -83,24 +83,24 @@ class PriceServiceTest {
         verify(priceMapper).toDTO(mockPrice);
     }
 	
-	@Test
-    void shouldReturnNullWhenNoPricesFound() {
-        // Given
-        PriceRequestDTO requestDTO = new PriceRequestDTO(35455L, 1L, LocalDateTime.of(2020, 6, 14, 10, 0));
+	 @Test
+	    void shouldThrowPriceNotFoundExceptionWhenNoPricesFound() {
+	        // Given
+	        PriceRequestDTO requestDTO = new PriceRequestDTO(35455L, 1L, LocalDateTime.of(2020, 6, 14, 10, 0));
 
-        // Simulamos que no hay precios
-        when(priceRepository.findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class)))
-            .thenReturn(new ArrayList<>());
+	        // Simulamos que no hay precios
+	        when(priceRepository.findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class)))
+	            .thenReturn(new ArrayList<>());
 
-        // When
-        PriceResponseDTO response = priceService.getFinalPrice(requestDTO);
+	        // When & Then
+	        assertThrows(PriceNotFoundException.class, () -> {
+	            priceService.getFinalPrice(requestDTO);
+	        });
 
-        // Then
-        assertNull(response);
-        verify(priceRepository).findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class));
-        verify(getPriceCase, never()).getFinalPrice(anyList());
-        verify(priceMapper, never()).toDTO(any());
-    }
+	        verify(priceRepository).findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class));
+	        verify(getPriceCase, never()).getFinalPrice(anyList());
+	        verify(priceMapper, never()).toDTO(any());
+	    }
 	
 	@Test
     void shouldLogAndThrowExceptionWhenUnexpectedErrorOccurs() {

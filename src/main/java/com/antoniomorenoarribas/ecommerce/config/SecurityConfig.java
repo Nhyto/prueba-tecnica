@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 	
-	 // Cargar las credenciales desde application.properties
+	// Cargar las credenciales desde application.properties
     @Value("${admin.username}")
     private String adminUsername;
 
@@ -28,8 +28,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf().disable()  // Desactiva CSRF para pruebas
-            .headers().frameOptions().disable()  // Permite la consola de H2
+            .csrf().disable()
+            .headers().frameOptions().disable() //Permite ver la consola H2
             .and()
             .authorizeRequests()
             .antMatchers("/h2-console/**").permitAll()  // Permite el acceso sin autenticación a la consola H2

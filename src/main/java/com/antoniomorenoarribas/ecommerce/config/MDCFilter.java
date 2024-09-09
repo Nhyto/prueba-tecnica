@@ -9,16 +9,15 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.MDC;
-import org.springframework.web.filter.OncePerRequestFilter;
 
 public class MDCFilter implements Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {}
+    public void init(FilterConfig filterConfig) throws ServletException {
+    	throw new UnsupportedOperationException("El método init no está implementado.");	
+    }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -32,10 +31,12 @@ public class MDCFilter implements Filter {
             // Continuar con el resto de la cadena de filtros
             chain.doFilter(request, response);
         } finally {
-            MDC.clear();  // Limpiar el MDC después de la respuesta
+            MDC.clear();
         }
     }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    	 throw new UnsupportedOperationException("El método destroy no está implementado.");
+    }
 }
