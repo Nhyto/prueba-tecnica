@@ -24,6 +24,6 @@ public interface PriceRepository {
      * @param applicationDate La fecha de aplicación(o consulta) en la que se requiere el precio.
      * @return Una lista de precios que coinciden con el producto, marca y fecha especificados.
      */
-    List<Price> findApplicablePrices(Long productId, Long brandId, LocalDateTime applicationDate);
+    Price findApplicablePrices(Long productId, Long brandId, LocalDateTime applicationDate);
     
 }

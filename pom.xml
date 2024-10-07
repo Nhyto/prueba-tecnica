@@ -49,6 +49,12 @@
             <version>1.5.3.Final</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+   			<groupId>org.openapitools</groupId>
+   			<artifactId>jackson-databind-nullable</artifactId>
+    		<version>0.2.1</version>
+		</dependency>
 
         <!-- Lombok -->
         <dependency>
@@ -156,6 +162,29 @@
             <version>3.2.0</version>
             <configuration>
                 <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+
+		<plugin>
+            <groupId>org.openapitools</groupId>
+            <artifactId>openapi-generator-maven-plugin</artifactId>
+            <version>6.0.0</version> <!-- Usa la versión más reciente disponible -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec> <!-- Ruta de tu archivo OpenAPI -->
+                <generatorName>spring</generatorName>
+                <apiPackage>com.antoniomorenoarribas.ecommerce.infraestructura.rest</apiPackage> <!-- Cambia por tu paquete API -->
+                <modelPackage>com.antoniomorenoarribas.ecommerce.domain.model</modelPackage> <!-- Cambia por tu paquete de modelos -->
+                <configOptions>
+                    <interfaceOnly>true</interfaceOnly> <!-- Genera solo la interfaz del controlador -->
+                    <useTags>true</useTags> <!-- Organiza las APIs por etiquetas si están definidas en OpenAPI -->
+                </configOptions>
             </configuration>
         </plugin>
 

@@ -1,9 +1,13 @@
 package com.antoniomorenoarribas.ecommerce.infrastructure.rest;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -35,5 +39,17 @@ public class GlobalExceptionHandler {
         logger.error("Unhandled exception: {}", ex.getMessage(), ex);
         ErrorResponseDTO errorResponse = new ErrorResponseDTO("INTERNAL_SERVER_ERROR", "Ocurrió un error inesperado.");
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    
+    @ExceptionHandler(BindException.class)
+    public ResponseEntity<ErrorResponseDTO> handleBindException(BindException ex) {
+        List<String> bindingErrors = ex.getBindingResult().getFieldErrors().stream()
+            .map(error -> error.getField() + ": " + error.getDefaultMessage())
+            .collect(Collectors.toList());
+
+        logger.warn("Binding error: {}", bindingErrors);
+        
+        ErrorResponseDTO errorResponse = new ErrorResponseDTO("INVALID_INPUT", "Error de conversión o entrada inválida", bindingErrors);
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 }

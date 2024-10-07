@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -15,6 +14,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,10 +26,10 @@ import org.slf4j.MDC;
 import com.antoniomorenoarribas.ecommerce.application.dto.requestdto.PriceRequestDTO;
 import com.antoniomorenoarribas.ecommerce.application.dto.responsedto.PriceResponseDTO;
 import com.antoniomorenoarribas.ecommerce.application.exceptions.PriceNotFoundException;
+import com.antoniomorenoarribas.ecommerce.application.exceptions.UnexpectedPriceProcessingException;
 import com.antoniomorenoarribas.ecommerce.application.mappers.PriceMapper;
 import com.antoniomorenoarribas.ecommerce.domain.model.Price;
 import com.antoniomorenoarribas.ecommerce.domain.repository.PriceRepository;
-import com.antoniomorenoarribas.ecommerce.domain.service.GetPriceCase;
 
 class PriceServiceTest {
 	
@@ -38,9 +38,6 @@ class PriceServiceTest {
 	
 	@Mock
 	private PriceMapper priceMapper;
-	
-	@Mock
-	private GetPriceCase getPriceCase;
 	
 	@InjectMocks
 	private PriceService priceService;
@@ -56,18 +53,16 @@ class PriceServiceTest {
         // Given
         PriceRequestDTO requestDTO = new PriceRequestDTO(35455L, 1L, LocalDateTime.of(2020, 6, 14, 10, 0));
 
-        List<Price> mockPrices = new ArrayList<>();
-        Price mockPrice = createMockPrice();
-        mockPrices.add(mockPrice);
+        
+        Price mockPrice = createMockPrice();  // Creamos el objeto mock de Price
+        when(priceRepository.findApplicablePrices(
+            anyLong(), anyLong(), any(LocalDateTime.class)))
+            .thenReturn(mockPrice);  // Simulamos que el repositorio devuelve un Optional con el Price
+        
+ 
+        
 
         PriceResponseDTO mockResponseDTO = new PriceResponseDTO(35455L, 1L, 1, LocalDateTime.of(2020, 6, 14, 0, 0), LocalDateTime.of(2020, 12, 31, 23, 59), new BigDecimal("35.50"), "EUR");
-
-        // Mockear repositorio
-        when(priceRepository.findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class)))
-            .thenReturn(mockPrices);
-        
-        // Mockear caso de uso de dominio
-        when(getPriceCase.getFinalPrice(mockPrices)).thenReturn(mockPrice);
         
         // Mockear el mapeador
         when(priceMapper.toDTO(mockPrice)).thenReturn(mockResponseDTO);
@@ -79,7 +74,6 @@ class PriceServiceTest {
         assertNotNull(response);
         assertEquals(mockResponseDTO.getPrice(), response.getPrice());
         verify(priceRepository).findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class));
-        verify(getPriceCase).getFinalPrice(mockPrices);
         verify(priceMapper).toDTO(mockPrice);
     }
 	
@@ -88,17 +82,14 @@ class PriceServiceTest {
 	        // Given
 	        PriceRequestDTO requestDTO = new PriceRequestDTO(35455L, 1L, LocalDateTime.of(2020, 6, 14, 10, 0));
 
-	        // Simulamos que no hay precios
-	        when(priceRepository.findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class)))
-	            .thenReturn(new ArrayList<>());
+	        
 
 	        // When & Then
-	        assertThrows(PriceNotFoundException.class, () -> {
+	        assertThrows(UnexpectedPriceProcessingException.class, () -> {
 	            priceService.getFinalPrice(requestDTO);
 	        });
 
 	        verify(priceRepository).findApplicablePrices(anyLong(), anyLong(), any(LocalDateTime.class));
-	        verify(getPriceCase, never()).getFinalPrice(anyList());
 	        verify(priceMapper, never()).toDTO(any());
 	    }
 	

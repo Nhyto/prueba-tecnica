@@ -5,13 +5,16 @@ import java.util.Objects;
 
 import javax.validation.constraints.NotNull;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class PriceRequestDTO {
 
 	@NotNull(message = "El productId no puede ser nulo")
 	private Long productId;
 	@NotNull(message = "El brandId no puede ser nulo")
     private Long brandId;
-	@NotNull(message = "La fecha de aplicación no puede ser nula")	
+	@NotNull(message = "La fecha de aplicación no puede ser nula")
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime applicationDate;
     
 	public PriceRequestDTO(Long productId, Long brandId, LocalDateTime applicationDate) {
