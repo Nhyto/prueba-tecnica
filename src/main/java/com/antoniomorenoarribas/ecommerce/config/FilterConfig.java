@@ -16,8 +16,8 @@ public class FilterConfig {
 	    public FilterRegistrationBean<MDCFilter> loggingFilter() {
 	        FilterRegistrationBean<MDCFilter> registrationBean = new FilterRegistrationBean<>();
 	        registrationBean.setFilter(new MDCFilter());
-	     // Aplicar el filtro a todas las rutas bajo "/api/*"
-	        registrationBean.addUrlPatterns("/api/*");
+	     
+	        registrationBean.addUrlPatterns("/v1/*");
 	        return registrationBean;
 	    }
 

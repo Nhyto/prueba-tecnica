@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.antoniomorenoarribas.ecommerce.application.exceptions.PriceNotFoundException;
 import com.antoniomorenoarribas.ecommerce.application.mappers.PriceMapper;
 import com.antoniomorenoarribas.ecommerce.domain.model.Price;
 import com.antoniomorenoarribas.ecommerce.domain.repository.PriceRepository;
@@ -26,14 +27,12 @@ public class JpaPriceRepository implements PriceRepository {
 	}
 
 	@Override
-	public List<Price> findApplicablePrices(Long productId, Long brandId, LocalDateTime applicationDate) {
+	public Price findApplicablePrices(Long productId, Long brandId, LocalDateTime applicationDate) {
 		
-	    // Ajustamos la búsqueda para verificar que la applicationDate esté entre startDate y endDate
-	    List<PriceEntity> priceEntities = springDataPriceRepository.findByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
-	        productId, brandId, applicationDate, applicationDate);
+		 PriceEntity priceEntity = springDataPriceRepository.findTopByProductIdAndBrandIdAndApplicationDateOrderByPriorityDesc(
+			        productId, brandId, applicationDate)
+			        .orElseThrow(() -> new PriceNotFoundException("No se encontró un precio aplicable para los criterios proporcionados."));
 
-	    return priceEntities.stream()
-	        .map(priceMapper::toDomain) 
-	        .collect(Collectors.toList());
+		 return priceMapper.toDomain(priceEntity);
 	}
 }

@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -51,54 +52,27 @@ class JpaPriceRepositoryTest {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0);
 
         // Mock de las entidades PriceEntity
-        List<PriceEntity> mockEntities = new ArrayList<>();
-        PriceEntity mockEntity = createMockPriceEntity();
-        mockEntities.add(mockEntity);
+        Optional<PriceEntity> mockEntityOptional = Optional.of(createMockPriceEntity());
 
         // Mock de la lista devuelta por SpringDataPriceRepository
-        when(springDataPriceRepository.findByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
-            productId, brandId, applicationDate, applicationDate)).thenReturn(mockEntities);
+        when(springDataPriceRepository.findTopByProductIdAndBrandIdAndApplicationDateOrderByPriorityDesc(
+            productId, brandId, applicationDate)).thenReturn(mockEntityOptional);
 
         // Mock del mapeo de entidad a dominio
         Price mockPrice = createMockPrice();
-        when(priceMapper.toDomain(mockEntity)).thenReturn(mockPrice);
+        when(priceMapper.toDomain(mockEntityOptional.get())).thenReturn(mockPrice);
 
         // When
-        List<Price> result = jpaPriceRepository.findApplicablePrices(productId, brandId, applicationDate);
+        Price result = jpaPriceRepository.findApplicablePrices(productId, brandId, applicationDate);
 
         // Then
         assertNotNull(result);
-        assertFalse(result.isEmpty());
-        assertEquals(1, result.size());
-        assertEquals(new BigDecimal("35.50"), result.get(0).getPrice());
+   
+        assertEquals(new BigDecimal("35.50"), result.getPrice());
 
-        verify(springDataPriceRepository).findByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
-            productId, brandId, applicationDate, applicationDate);
-        verify(priceMapper).toDomain(mockEntity);
+        verify(springDataPriceRepository).findTopByProductIdAndBrandIdAndApplicationDateOrderByPriorityDesc(productId, brandId, applicationDate);
+        verify(priceMapper).toDomain(mockEntityOptional.get());
     }
-	
-	 @Test
-	    void shouldReturnEmptyListWhenNoEntitiesFound() {
-	        // Given
-	        Long productId = 35455L;
-	        Long brandId = 1L;
-	        LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0);
-
-	        // Simulamos que el repositorio devuelve una lista vacía
-	        when(springDataPriceRepository.findByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
-	            productId, brandId, applicationDate, applicationDate)).thenReturn(new ArrayList<>());
-
-	        // When
-	        List<Price> result = jpaPriceRepository.findApplicablePrices(productId, brandId, applicationDate);
-
-	        // Then
-	        assertNotNull(result);
-	        assertTrue(result.isEmpty());
-
-	        verify(springDataPriceRepository).findByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(
-	            productId, brandId, applicationDate, applicationDate);
-	        verify(priceMapper, never()).toDomain(any(PriceEntity.class));
-	    }
 	 
 	 private PriceEntity createMockPriceEntity() {
 		    PriceEntity entity = new PriceEntity();

@@ -33,7 +33,7 @@ public class SecurityConfig {
             .and()
             .authorizeRequests()
             .antMatchers("/h2-console/**").permitAll()  // Permite el acceso sin autenticación a la consola H2
-            .antMatchers("/api/prices/**").authenticated()  // Protege los endpoints de la API
+            .antMatchers("/v1/prices/**").authenticated()  // Protege los endpoints de la API
             .anyRequest().authenticated()
             .and()
             .httpBasic();  // Autenticación básica

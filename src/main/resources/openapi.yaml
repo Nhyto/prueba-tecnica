@@ -1,0 +1,117 @@
+openapi: 3.0.0
+info:
+  title: API de Precios
+  version: 1.0.0
+  description: |
+    API para recuperar el precio final de un producto en base a la lógica de prioridad. 
+    Los precios se seleccionan en función de la fecha de aplicación, el producto, y la marca.
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /v1/prices:
+    get:
+      summary: Obtener el precio final de un producto
+      description: |
+        Recupera el precio final de un producto en base a la fecha de aplicación, el producto y la marca.
+        La lógica selecciona el precio con la prioridad más alta disponible.
+      parameters:
+        - name: productId
+          in: query
+          description: El ID del producto para el cual se busca el precio.
+          required: true
+          schema:
+            type: integer
+        - name: brandId
+          in: query
+          description: El ID de la marca que se utilizará para filtrar el precio.
+          required: true
+          schema:
+            type: integer
+        - name: applicationDate
+          in: query
+          description: |
+            La fecha y hora para la que se desea consultar el precio. 
+            Debe estar en formato ISO8601 (yyyy-MM-dd'T'HH:mm:ss).
+          required: true
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Precio final obtenido exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PriceResponseDTO'
+        '400':
+          description: Parámetros incorrectos o mal formados.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: No se encontró un precio para los criterios especificados.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    PriceResponseDTO:
+      type: object
+      properties:
+        productId:
+          type: integer
+          description: El ID del producto consultado.
+        brandId:
+          type: integer
+          description: El ID de la marca consultada.
+        priceList:
+          type: integer
+          description: Lista de precios aplicable.
+        startDate:
+          type: string
+          format: date-time
+          description: Fecha de inicio del precio aplicable.
+        endDate:
+          type: string
+          format: date-time
+          description: Fecha de fin del precio aplicable.
+        price:
+          type: number
+          format: float
+          description: Precio final aplicado.
+        currency:
+          type: string
+          description: Moneda en la que se muestra el precio.
+        priority:
+          type: integer
+          description: Nivel de prioridad del precio aplicado.
+      required:
+        - productId
+        - brandId
+        - priceList
+        - startDate
+        - endDate
+        - price
+        - currency
+        - priority
+      description: |
+        Esta respuesta devuelve el precio final basado en la lógica de prioridad más alta 
+        para el producto, marca, y fecha aplicados.
+
+    ErrorResponse:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: Código de error que identifica el problema.
+        errorMessage:
+          type: string
+          description: Mensaje de error que describe el problema.
+      description: |
+        La respuesta de error que se devuelve cuando hay problemas con la solicitud, 
+        como parámetros faltantes o mal formados, o cuando no se encuentra un precio aplicable.
