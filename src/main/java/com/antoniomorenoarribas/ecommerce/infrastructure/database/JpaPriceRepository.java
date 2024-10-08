@@ -29,7 +29,6 @@ public class JpaPriceRepository implements PriceRepository {
 	@Override
 	public Price findApplicablePrices(Long productId, Long brandId, LocalDateTime applicationDate) {
 		
-	    // Ajustamos la búsqueda para verificar que la applicationDate esté entre startDate y endDate
 		 PriceEntity priceEntity = springDataPriceRepository.findTopByProductIdAndBrandIdAndApplicationDateOrderByPriorityDesc(
 			        productId, brandId, applicationDate)
 			        .orElseThrow(() -> new PriceNotFoundException("No se encontró un precio aplicable para los criterios proporcionados."));

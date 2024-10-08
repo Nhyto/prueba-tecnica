@@ -52,7 +52,6 @@ public class PriceService {
 	        long startTime = System.currentTimeMillis();
 
 	        try {
-	            // Consultar precios en el repositorio
 	            Price price = priceRepository.findApplicablePrices(
 	                    request.getProductId(),
 	                    request.getBrandId(),

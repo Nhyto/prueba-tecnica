@@ -23,7 +23,7 @@ public class SwaggerConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("ecommerce")
-                .pathsToMatch("/api/**")
+                .pathsToMatch("/v1/**")
                 .build();
     }
 }

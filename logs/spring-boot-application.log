@@ -12055,3 +12055,272 @@ Caused by: java.lang.IllegalStateException: Method public abstract java.util.Opt
 2024-10-08 01:05:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-08 01:05:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Shutdown initiated...
 2024-10-08 01:05:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Shutdown completed.
+2024-10-08 08:58:06 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [testRequestId] - Starting PriceControllerIntegrationTest using Java 11.0.20 on LPC978 with PID 20232 (started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 08:58:06 [main] DEBUG c.a.e.i.r.PriceControllerIntegrationTest [testRequestId] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 08:58:06 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [testRequestId] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 08:58:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [testRequestId] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 08:58:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [testRequestId] - Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interfaces.
+2024-10-08 08:58:08 [main] INFO  com.zaxxer.hikari.HikariDataSource [testRequestId] - HikariPool-1 - Starting...
+2024-10-08 08:58:08 [main] INFO  com.zaxxer.hikari.HikariDataSource [testRequestId] - HikariPool-1 - Start completed.
+2024-10-08 08:58:09 [main] INFO  o.h.jpa.internal.util.LogHelper [testRequestId] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 08:58:09 [main] INFO  org.hibernate.Version [testRequestId] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 08:58:09 [main] INFO  o.h.annotations.common.Version [testRequestId] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 08:58:10 [main] INFO  org.hibernate.dialect.Dialect [testRequestId] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 08:58:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [testRequestId] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 08:58:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [testRequestId] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 08:58:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [testRequestId] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@148f94dc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f11d889, org.springframework.security.web.context.SecurityContextPersistenceFilter@3cd89c72, org.springframework.security.web.header.HeaderWriterFilter@32153bbe, org.springframework.security.web.authentication.logout.LogoutFilter@1387bd84, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@564fc235, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@694c0ed1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@118f2486, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d1973e8, org.springframework.security.web.session.SessionManagementFilter@4516c2ef, org.springframework.security.web.access.ExceptionTranslationFilter@3eb641a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@444ebefd]
+2024-10-08 08:58:12 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [testRequestId] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 08:58:12 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [testRequestId] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 08:58:13 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [testRequestId] - Initializing Spring TestDispatcherServlet ''
+2024-10-08 08:58:13 [main] INFO  o.s.t.w.s.TestDispatcherServlet [testRequestId] - Initializing Servlet ''
+2024-10-08 08:58:13 [main] INFO  o.s.t.w.s.TestDispatcherServlet [testRequestId] - Completed initialization in 2 ms
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [testRequestId] - Started PriceControllerIntegrationTest in 7.804 seconds (JVM running for 10.271)
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.rest.PriceController [98ae482d-4ff2-4376-94b9-bef927187ebb] - Iniciando solicitud con requestId: 98ae482d-4ff2-4376-94b9-bef927187ebb, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-16T21:00
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [98ae482d-4ff2-4376-94b9-bef927187ebb] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-16T21:00
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [98ae482d-4ff2-4376-94b9-bef927187ebb] - Precio final calculado en PriceService con requestId: 98ae482d-4ff2-4376-94b9-bef927187ebb es: 38.95
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [98ae482d-4ff2-4376-94b9-bef927187ebb] - Tiempo de ejecuciÛn de PriceService con requestId: 98ae482d-4ff2-4376-94b9-bef927187ebb fue de 84 ms
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.rest.PriceController [98ae482d-4ff2-4376-94b9-bef927187ebb] - Solicitud con requestId: 98ae482d-4ff2-4376-94b9-bef927187ebb procesada exitosamente en 84 ms. Precio final: 38.95
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.rest.PriceController [a552f6da-af8d-45ae-819e-9cde06d87d96] - Iniciando solicitud con requestId: a552f6da-af8d-45ae-819e-9cde06d87d96, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2021-06-06T10:00
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [a552f6da-af8d-45ae-819e-9cde06d87d96] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2021-06-06T10:00
+2024-10-08 08:58:13 [main] WARN  c.a.e.a.service.PriceService [a552f6da-af8d-45ae-819e-9cde06d87d96] - PriceNotFoundException para requestId: a552f6da-af8d-45ae-819e-9cde06d87d96: No se encontrÛ un precio aplicable para los criterios proporcionados.
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [a552f6da-af8d-45ae-819e-9cde06d87d96] - Tiempo de ejecuciÛn de PriceService con requestId: a552f6da-af8d-45ae-819e-9cde06d87d96 fue de 3 ms
+2024-10-08 08:58:13 [main] WARN  c.a.e.i.rest.GlobalExceptionHandler [] - Price not found: No se encontrÛ un precio aplicable para los criterios proporcionados.
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.rest.PriceController [8d0283e1-22c4-4b2a-a8f9-79117edb1ce8] - Iniciando solicitud con requestId: 8d0283e1-22c4-4b2a-a8f9-79117edb1ce8, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T10:00
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [8d0283e1-22c4-4b2a-a8f9-79117edb1ce8] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T10:00
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [8d0283e1-22c4-4b2a-a8f9-79117edb1ce8] - Precio final calculado en PriceService con requestId: 8d0283e1-22c4-4b2a-a8f9-79117edb1ce8 es: 35.50
+2024-10-08 08:58:13 [main] INFO  c.a.e.a.service.PriceService [8d0283e1-22c4-4b2a-a8f9-79117edb1ce8] - Tiempo de ejecuciÛn de PriceService con requestId: 8d0283e1-22c4-4b2a-a8f9-79117edb1ce8 fue de 2 ms
+2024-10-08 08:58:13 [main] INFO  c.a.e.i.rest.PriceController [8d0283e1-22c4-4b2a-a8f9-79117edb1ce8] - Solicitud con requestId: 8d0283e1-22c4-4b2a-a8f9-79117edb1ce8 procesada exitosamente en 2 ms. Precio final: 35.50
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [7de9facf-833d-469f-902f-cd8f04eb71d0] - Iniciando solicitud con requestId: 7de9facf-833d-469f-902f-cd8f04eb71d0, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-15T10:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [7de9facf-833d-469f-902f-cd8f04eb71d0] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-15T10:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [7de9facf-833d-469f-902f-cd8f04eb71d0] - Precio final calculado en PriceService con requestId: 7de9facf-833d-469f-902f-cd8f04eb71d0 es: 30.50
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [7de9facf-833d-469f-902f-cd8f04eb71d0] - Tiempo de ejecuciÛn de PriceService con requestId: 7de9facf-833d-469f-902f-cd8f04eb71d0 fue de 3 ms
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [7de9facf-833d-469f-902f-cd8f04eb71d0] - Solicitud con requestId: 7de9facf-833d-469f-902f-cd8f04eb71d0 procesada exitosamente en 3 ms. Precio final: 30.50
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [848b2960-bd46-48e5-a148-25ac44714b6f] - Iniciando solicitud con requestId: 848b2960-bd46-48e5-a148-25ac44714b6f, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T16:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [848b2960-bd46-48e5-a148-25ac44714b6f] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T16:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [848b2960-bd46-48e5-a148-25ac44714b6f] - Precio final calculado en PriceService con requestId: 848b2960-bd46-48e5-a148-25ac44714b6f es: 25.45
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [848b2960-bd46-48e5-a148-25ac44714b6f] - Tiempo de ejecuciÛn de PriceService con requestId: 848b2960-bd46-48e5-a148-25ac44714b6f fue de 3 ms
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [848b2960-bd46-48e5-a148-25ac44714b6f] - Solicitud con requestId: 848b2960-bd46-48e5-a148-25ac44714b6f procesada exitosamente en 3 ms. Precio final: 25.45
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [fb7aea92-43b9-4d2c-ac77-16300c25c7a0] - Iniciando solicitud con requestId: fb7aea92-43b9-4d2c-ac77-16300c25c7a0, ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T21:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [fb7aea92-43b9-4d2c-ac77-16300c25c7a0] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de AplicaciÛn: 2020-06-14T21:00
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [fb7aea92-43b9-4d2c-ac77-16300c25c7a0] - Precio final calculado en PriceService con requestId: fb7aea92-43b9-4d2c-ac77-16300c25c7a0 es: 35.50
+2024-10-08 08:58:14 [main] INFO  c.a.e.a.service.PriceService [fb7aea92-43b9-4d2c-ac77-16300c25c7a0] - Tiempo de ejecuciÛn de PriceService con requestId: fb7aea92-43b9-4d2c-ac77-16300c25c7a0 fue de 2 ms
+2024-10-08 08:58:14 [main] INFO  c.a.e.i.rest.PriceController [fb7aea92-43b9-4d2c-ac77-16300c25c7a0] - Solicitud con requestId: fb7aea92-43b9-4d2c-ac77-16300c25c7a0 procesada exitosamente en 2 ms. Precio final: 35.50
+2024-10-08 08:58:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.antoniomorenoarribas.ecommerce.PruebaTecnicaApplicationTests], using SpringBootContextLoader
+2024-10-08 08:58:14 [main] INFO  o.s.t.c.s.AbstractContextLoader [] - Could not detect default resource locations for test class [com.antoniomorenoarribas.ecommerce.PruebaTecnicaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-10-08 08:58:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils [] - Could not detect default configuration classes for test class [com.antoniomorenoarribas.ecommerce.PruebaTecnicaApplicationTests]: PruebaTecnicaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-08 08:58:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [] - Found @SpringBootConfiguration com.antoniomorenoarribas.ecommerce.PruebaTecnicaApplication for test class com.antoniomorenoarribas.ecommerce.PruebaTecnicaApplicationTests
+2024-10-08 08:58:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2024-10-08 08:58:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61f2bf3a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a0dd851, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@293dd4b3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@25a81f28, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@51577fc8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@753cfae3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@326320bb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@57573880, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d94b49d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2fedaa2e, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4203190, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6add8aac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@72f5fb36, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@300b839c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@352288bc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@33acec5e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6edd8d56]
+2024-10-08 08:58:14 [main] INFO  c.a.e.PruebaTecnicaApplicationTests [] - Starting PruebaTecnicaApplicationTests using Java 11.0.20 on LPC978 with PID 20232 (started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 08:58:14 [main] DEBUG c.a.e.PruebaTecnicaApplicationTests [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 08:58:14 [main] INFO  c.a.e.PruebaTecnicaApplicationTests [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 08:58:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 08:58:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2024-10-08 08:58:15 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Starting...
+2024-10-08 08:58:15 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Start completed.
+2024-10-08 08:58:15 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 08:58:15 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 08:58:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 08:58:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 08:58:15 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@495cac83, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7225583d, org.springframework.security.web.context.SecurityContextPersistenceFilter@f7e004d, org.springframework.security.web.header.HeaderWriterFilter@12ff0e4f, org.springframework.security.web.authentication.logout.LogoutFilter@117e9a56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76958827, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d33aa31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@475454ae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fe7454c, org.springframework.security.web.session.SessionManagementFilter@66b9f727, org.springframework.security.web.access.ExceptionTranslationFilter@498d7c57, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6049b4c9]
+2024-10-08 08:58:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 08:58:15 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 08:58:16 [main] INFO  c.a.e.PruebaTecnicaApplicationTests [] - Started PruebaTecnicaApplicationTests in 1.704 seconds (JVM running for 12.832)
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Shutdown initiated...
+2024-10-08 08:58:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-2 - Shutdown completed.
+2024-10-08 09:00:15 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Starting PriceControllerIntegrationTest using Java 11.0.20 on LPC978 with PID 16968 (started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 09:00:15 [main] DEBUG c.a.e.i.r.PriceControllerIntegrationTest [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 09:00:15 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 09:00:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 09:00:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 130 ms. Found 1 JPA repository interfaces.
+2024-10-08 09:00:17 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+2024-10-08 09:00:17 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+2024-10-08 09:00:18 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 09:00:18 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 09:00:18 [main] INFO  o.h.annotations.common.Version [] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 09:00:19 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 09:00:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 09:00:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:00:21 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53b7f08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24536f07, org.springframework.security.web.context.SecurityContextPersistenceFilter@796613b7, org.springframework.security.web.header.HeaderWriterFilter@421d7900, org.springframework.security.web.authentication.logout.LogoutFilter@67372d20, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b338591, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34c07ecc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7df23848, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32430075, org.springframework.security.web.session.SessionManagementFilter@15bcecf9, org.springframework.security.web.access.ExceptionTranslationFilter@510bd87a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e017f47]
+2024-10-08 09:00:21 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 09:00:21 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 09:00:23 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [] - Initializing Spring TestDispatcherServlet ''
+2024-10-08 09:00:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Initializing Servlet ''
+2024-10-08 09:00:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Completed initialization in 1 ms
+2024-10-08 09:00:23 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Started PriceControllerIntegrationTest in 8.225 seconds (JVM running for 11.124)
+2024-10-08 09:00:41 [main] INFO  c.a.e.i.rest.PriceController [35247721-676f-41e3-a001-81c74b5411f4] - Iniciando solicitud con requestId: 35247721-676f-41e3-a001-81c74b5411f4, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2021-06-06T10:00
+2024-10-08 09:00:55 [main] INFO  c.a.e.a.service.PriceService [35247721-676f-41e3-a001-81c74b5411f4] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2021-06-06T10:00
+2024-10-08 09:01:15 [main] WARN  c.a.e.a.service.PriceService [35247721-676f-41e3-a001-81c74b5411f4] - PriceNotFoundException para requestId: 35247721-676f-41e3-a001-81c74b5411f4: No se encontr√≥ un precio aplicable para los criterios proporcionados.
+2024-10-08 09:01:19 [main] INFO  c.a.e.a.service.PriceService [35247721-676f-41e3-a001-81c74b5411f4] - Tiempo de ejecuci√≥n de PriceService con requestId: 35247721-676f-41e3-a001-81c74b5411f4 fue de 23378 ms
+2024-10-08 09:01:28 [main] WARN  c.a.e.i.rest.GlobalExceptionHandler [] - Price not found: No se encontr√≥ un precio aplicable para los criterios proporcionados.
+2024-10-08 09:02:02 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Starting PriceControllerIntegrationTest using Java 11.0.20 on LPC978 with PID 17032 (started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 09:02:02 [main] DEBUG c.a.e.i.r.PriceControllerIntegrationTest [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 09:02:02 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 09:02:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 09:02:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interfaces.
+2024-10-08 09:02:04 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+2024-10-08 09:02:05 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+2024-10-08 09:02:05 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 09:02:05 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 09:02:05 [main] INFO  o.h.annotations.common.Version [] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 09:02:06 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 09:02:06 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 09:02:06 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:02:07 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53b7f08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24536f07, org.springframework.security.web.context.SecurityContextPersistenceFilter@796613b7, org.springframework.security.web.header.HeaderWriterFilter@421d7900, org.springframework.security.web.authentication.logout.LogoutFilter@67372d20, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b338591, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34c07ecc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7df23848, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32430075, org.springframework.security.web.session.SessionManagementFilter@15bcecf9, org.springframework.security.web.access.ExceptionTranslationFilter@510bd87a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e017f47]
+2024-10-08 09:02:08 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 09:02:08 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 09:02:09 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [] - Initializing Spring TestDispatcherServlet ''
+2024-10-08 09:02:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Initializing Servlet ''
+2024-10-08 09:02:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Completed initialization in 1 ms
+2024-10-08 09:02:09 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Started PriceControllerIntegrationTest in 7.512 seconds (JVM running for 10.193)
+2024-10-08 09:02:34 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:02:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+2024-10-08 09:02:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+2024-10-08 09:02:54 [main] INFO  c.a.e.i.rest.PriceController [33ac99c2-640d-418a-9e57-7a951670cc23] - Iniciando solicitud con requestId: 33ac99c2-640d-418a-9e57-7a951670cc23, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:03:03 [main] INFO  c.a.e.a.service.PriceService [33ac99c2-640d-418a-9e57-7a951670cc23] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:03:31 [main] INFO  c.a.e.a.service.PriceService [33ac99c2-640d-418a-9e57-7a951670cc23] - Precio final calculado en PriceService con requestId: 33ac99c2-640d-418a-9e57-7a951670cc23 es: 35.50
+2024-10-08 09:03:51 [main] INFO  c.a.e.a.service.PriceService [33ac99c2-640d-418a-9e57-7a951670cc23] - Tiempo de ejecuci√≥n de PriceService con requestId: 33ac99c2-640d-418a-9e57-7a951670cc23 fue de 46351 ms
+2024-10-08 09:03:55 [main] INFO  c.a.e.i.rest.PriceController [33ac99c2-640d-418a-9e57-7a951670cc23] - Solicitud con requestId: 33ac99c2-640d-418a-9e57-7a951670cc23 procesada exitosamente en 57669 ms. Precio final: 35.50
+2024-10-08 09:04:45 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:04:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+2024-10-08 09:04:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+2024-10-08 09:05:10 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Starting PriceControllerIntegrationTest using Java 11.0.20 on LPC978 with PID 24612 (started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 09:05:10 [main] DEBUG c.a.e.i.r.PriceControllerIntegrationTest [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 09:05:10 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 09:05:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 09:05:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+2024-10-08 09:05:12 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+2024-10-08 09:05:13 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+2024-10-08 09:05:13 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 09:05:13 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 09:05:13 [main] INFO  o.h.annotations.common.Version [] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 09:05:14 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 09:05:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 09:05:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:05:15 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10ae002e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@573f2e67, org.springframework.security.web.context.SecurityContextPersistenceFilter@19b3d3a4, org.springframework.security.web.header.HeaderWriterFilter@6e22d6bf, org.springframework.security.web.authentication.logout.LogoutFilter@7f9d40b3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2bb84aa5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d3768ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a9ea03f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d449307, org.springframework.security.web.session.SessionManagementFilter@7fe0ca60, org.springframework.security.web.access.ExceptionTranslationFilter@106edde4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4542af89]
+2024-10-08 09:05:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 09:05:16 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 09:05:16 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [] - Initializing Spring TestDispatcherServlet ''
+2024-10-08 09:05:16 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Initializing Servlet ''
+2024-10-08 09:05:16 [main] INFO  o.s.t.w.s.TestDispatcherServlet [] - Completed initialization in 1 ms
+2024-10-08 09:05:16 [main] INFO  c.a.e.i.r.PriceControllerIntegrationTest [] - Started PriceControllerIntegrationTest in 6.282 seconds (JVM running for 8.764)
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [98a468bf-1bd1-40e0-af31-0a3daa3f4570] - Iniciando solicitud con requestId: 98a468bf-1bd1-40e0-af31-0a3daa3f4570, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-16T21:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [98a468bf-1bd1-40e0-af31-0a3daa3f4570] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-16T21:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [98a468bf-1bd1-40e0-af31-0a3daa3f4570] - Precio final calculado en PriceService con requestId: 98a468bf-1bd1-40e0-af31-0a3daa3f4570 es: 38.95
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [98a468bf-1bd1-40e0-af31-0a3daa3f4570] - Tiempo de ejecuci√≥n de PriceService con requestId: 98a468bf-1bd1-40e0-af31-0a3daa3f4570 fue de 94 ms
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [98a468bf-1bd1-40e0-af31-0a3daa3f4570] - Solicitud con requestId: 98a468bf-1bd1-40e0-af31-0a3daa3f4570 procesada exitosamente en 94 ms. Precio final: 38.95
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [68d1ddd3-26ff-4a8f-a51e-23ab8e80012c] - Iniciando solicitud con requestId: 68d1ddd3-26ff-4a8f-a51e-23ab8e80012c, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2021-06-06T10:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [68d1ddd3-26ff-4a8f-a51e-23ab8e80012c] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2021-06-06T10:00
+2024-10-08 09:05:17 [main] WARN  c.a.e.a.service.PriceService [68d1ddd3-26ff-4a8f-a51e-23ab8e80012c] - PriceNotFoundException para requestId: 68d1ddd3-26ff-4a8f-a51e-23ab8e80012c: No se encontr√≥ un precio aplicable para los criterios proporcionados.
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [68d1ddd3-26ff-4a8f-a51e-23ab8e80012c] - Tiempo de ejecuci√≥n de PriceService con requestId: 68d1ddd3-26ff-4a8f-a51e-23ab8e80012c fue de 3 ms
+2024-10-08 09:05:17 [main] WARN  c.a.e.i.rest.GlobalExceptionHandler [] - Price not found: No se encontr√≥ un precio aplicable para los criterios proporcionados.
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [e6786291-d93f-4226-bb45-87ff24b4abb4] - Iniciando solicitud con requestId: e6786291-d93f-4226-bb45-87ff24b4abb4, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [e6786291-d93f-4226-bb45-87ff24b4abb4] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [e6786291-d93f-4226-bb45-87ff24b4abb4] - Precio final calculado en PriceService con requestId: e6786291-d93f-4226-bb45-87ff24b4abb4 es: 35.50
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [e6786291-d93f-4226-bb45-87ff24b4abb4] - Tiempo de ejecuci√≥n de PriceService con requestId: e6786291-d93f-4226-bb45-87ff24b4abb4 fue de 3 ms
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [e6786291-d93f-4226-bb45-87ff24b4abb4] - Solicitud con requestId: e6786291-d93f-4226-bb45-87ff24b4abb4 procesada exitosamente en 3 ms. Precio final: 35.50
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [61b1fcfc-fcf1-40b3-bc03-5e7487580ca1] - Iniciando solicitud con requestId: 61b1fcfc-fcf1-40b3-bc03-5e7487580ca1, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-15T10:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [61b1fcfc-fcf1-40b3-bc03-5e7487580ca1] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-15T10:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [61b1fcfc-fcf1-40b3-bc03-5e7487580ca1] - Precio final calculado en PriceService con requestId: 61b1fcfc-fcf1-40b3-bc03-5e7487580ca1 es: 30.50
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [61b1fcfc-fcf1-40b3-bc03-5e7487580ca1] - Tiempo de ejecuci√≥n de PriceService con requestId: 61b1fcfc-fcf1-40b3-bc03-5e7487580ca1 fue de 3 ms
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [61b1fcfc-fcf1-40b3-bc03-5e7487580ca1] - Solicitud con requestId: 61b1fcfc-fcf1-40b3-bc03-5e7487580ca1 procesada exitosamente en 4 ms. Precio final: 30.50
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [4dc49ff7-eab1-4d74-9c1e-3421e56cdf98] - Iniciando solicitud con requestId: 4dc49ff7-eab1-4d74-9c1e-3421e56cdf98, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T16:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [4dc49ff7-eab1-4d74-9c1e-3421e56cdf98] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T16:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [4dc49ff7-eab1-4d74-9c1e-3421e56cdf98] - Precio final calculado en PriceService con requestId: 4dc49ff7-eab1-4d74-9c1e-3421e56cdf98 es: 25.45
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [4dc49ff7-eab1-4d74-9c1e-3421e56cdf98] - Tiempo de ejecuci√≥n de PriceService con requestId: 4dc49ff7-eab1-4d74-9c1e-3421e56cdf98 fue de 3 ms
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [4dc49ff7-eab1-4d74-9c1e-3421e56cdf98] - Solicitud con requestId: 4dc49ff7-eab1-4d74-9c1e-3421e56cdf98 procesada exitosamente en 3 ms. Precio final: 25.45
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [8e2e6cfd-db0d-41e7-af9f-64ea82f752ba] - Iniciando solicitud con requestId: 8e2e6cfd-db0d-41e7-af9f-64ea82f752ba, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T21:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [8e2e6cfd-db0d-41e7-af9f-64ea82f752ba] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T21:00
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [8e2e6cfd-db0d-41e7-af9f-64ea82f752ba] - Precio final calculado en PriceService con requestId: 8e2e6cfd-db0d-41e7-af9f-64ea82f752ba es: 35.50
+2024-10-08 09:05:17 [main] INFO  c.a.e.a.service.PriceService [8e2e6cfd-db0d-41e7-af9f-64ea82f752ba] - Tiempo de ejecuci√≥n de PriceService con requestId: 8e2e6cfd-db0d-41e7-af9f-64ea82f752ba fue de 2 ms
+2024-10-08 09:05:17 [main] INFO  c.a.e.i.rest.PriceController [8e2e6cfd-db0d-41e7-af9f-64ea82f752ba] - Solicitud con requestId: 8e2e6cfd-db0d-41e7-af9f-64ea82f752ba procesada exitosamente en 2 ms. Precio final: 35.50
+2024-10-08 09:05:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:05:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+2024-10-08 09:05:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+2024-10-08 09:05:40 [main] INFO  c.a.e.PruebaTecnicaApplication [] - Starting PruebaTecnicaApplication using Java 11.0.20 on LPC978 with PID 24664 (C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica\target\classes started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 09:05:40 [main] DEBUG c.a.e.PruebaTecnicaApplication [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 09:05:40 [main] INFO  c.a.e.PruebaTecnicaApplication [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 09:05:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 09:05:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interfaces.
+2024-10-08 09:05:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port(s): 8080 (http)
+2024-10-08 09:05:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-08 09:05:44 [main] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+2024-10-08 09:05:44 [main] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-08 09:05:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+2024-10-08 09:05:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 4503 ms
+2024-10-08 09:05:45 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+2024-10-08 09:05:45 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+2024-10-08 09:05:45 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 09:05:46 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 09:05:46 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 09:05:46 [main] INFO  o.h.annotations.common.Version [] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 09:05:46 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 09:05:47 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 09:05:47 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:05:48 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c6fc278, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23ee92df, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fb9a83c, org.springframework.security.web.header.HeaderWriterFilter@7fe0ca60, org.springframework.security.web.authentication.logout.LogoutFilter@1b53e6fc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4113d9ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5216532a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@862624f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6a4595, org.springframework.security.web.session.SessionManagementFilter@2ba0b95f, org.springframework.security.web.access.ExceptionTranslationFilter@6ad0cd43, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a45c218]
+2024-10-08 09:05:48 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 09:05:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-08 09:05:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2024-10-08 09:05:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:05:48 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown initiated...
+2024-10-08 09:05:48 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Shutdown completed.
+2024-10-08 09:05:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-10-08 09:05:48 [main] INFO  o.a.catalina.core.StandardService [] - Stopping service [Tomcat]
+2024-10-08 09:05:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-08 09:05:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-10-08 09:05:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener [] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-10-08 09:05:48 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-10-08 09:07:41 [main] INFO  c.a.e.PruebaTecnicaApplication [] - Starting PruebaTecnicaApplication using Java 11.0.20 on LPC978 with PID 20452 (C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica\target\classes started by 52009973G in C:\Users\52009973G\Documents\gitPrueba\pruebaITX\prueba-tecnica)
+2024-10-08 09:07:41 [main] DEBUG c.a.e.PruebaTecnicaApplication [] - Running with Spring Boot v2.7.9, Spring v5.3.25
+2024-10-08 09:07:41 [main] INFO  c.a.e.PruebaTecnicaApplication [] - No active profile set, falling back to 1 default profile: "default"
+2024-10-08 09:07:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-08 09:07:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [] - Finished Spring Data repository scanning in 185 ms. Found 1 JPA repository interfaces.
+2024-10-08 09:07:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat initialized with port(s): 9090 (http)
+2024-10-08 09:07:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Initializing ProtocolHandler ["http-nio-9090"]
+2024-10-08 09:07:45 [main] INFO  o.a.catalina.core.StandardService [] - Starting service [Tomcat]
+2024-10-08 09:07:45 [main] INFO  o.a.catalina.core.StandardEngine [] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-08 09:07:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring embedded WebApplicationContext
+2024-10-08 09:07:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [] - Root WebApplicationContext: initialization completed in 4616 ms
+2024-10-08 09:07:46 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Starting...
+2024-10-08 09:07:46 [main] INFO  com.zaxxer.hikari.HikariDataSource [] - HikariPool-1 - Start completed.
+2024-10-08 09:07:46 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-08 09:07:47 [main] INFO  o.h.jpa.internal.util.LogHelper [] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-08 09:07:47 [main] INFO  org.hibernate.Version [] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-10-08 09:07:47 [main] INFO  o.h.annotations.common.Version [] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-08 09:07:47 [main] INFO  org.hibernate.dialect.Dialect [] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-08 09:07:48 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-08 09:07:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08 09:07:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain [] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e4a4ed5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5644f664, org.springframework.security.web.context.SecurityContextPersistenceFilter@78e7b83, org.springframework.security.web.header.HeaderWriterFilter@31f5ffb9, org.springframework.security.web.authentication.logout.LogoutFilter@25dc2c0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a6a4595, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c8a91e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c7443f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@445f6f73, org.springframework.security.web.session.SessionManagementFilter@5216532a, org.springframework.security.web.access.ExceptionTranslationFilter@3f838072, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6aa18912]
+2024-10-08 09:07:49 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-08 09:07:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol [] - Starting ProtocolHandler ["http-nio-9090"]
+2024-10-08 09:07:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [] - Tomcat started on port(s): 9090 (http) with context path ''
+2024-10-08 09:07:50 [main] INFO  c.a.e.PruebaTecnicaApplication [] - Started PruebaTecnicaApplication in 9.699 seconds (JVM running for 11.285)
+2024-10-08 09:08:13 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-08 09:08:13 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Initializing Servlet 'dispatcherServlet'
+2024-10-08 09:08:13 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet [] - Completed initialization in 1 ms
+2024-10-08 09:08:13 [http-nio-9090-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase [] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [473] milliseconds.
+2024-10-08 09:08:23 [http-nio-9090-exec-10] INFO  o.s.api.AbstractOpenApiResource [] - Init duration for springdoc-openapi is: 854 ms
+2024-10-08 09:09:58 [http-nio-9090-exec-7] INFO  c.a.e.i.rest.PriceController [30b39b1a-338a-444c-9b5f-fb2083a8c98d] - Iniciando solicitud con requestId: 30b39b1a-338a-444c-9b5f-fb2083a8c98d, ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:10:09 [http-nio-9090-exec-7] INFO  c.a.e.a.service.PriceService [30b39b1a-338a-444c-9b5f-fb2083a8c98d] - Iniciando el proceso para obtener precio final para ProductId: 35455, BrandId: 1, Fecha de Aplicaci√≥n: 2020-06-14T10:00
+2024-10-08 09:10:21 [http-nio-9090-exec-7] INFO  c.a.e.a.service.PriceService [30b39b1a-338a-444c-9b5f-fb2083a8c98d] - Precio final calculado en PriceService con requestId: 30b39b1a-338a-444c-9b5f-fb2083a8c98d es: 35.50
+2024-10-08 09:10:24 [http-nio-9090-exec-7] INFO  c.a.e.a.service.PriceService [30b39b1a-338a-444c-9b5f-fb2083a8c98d] - Tiempo de ejecuci√≥n de PriceService con requestId: 30b39b1a-338a-444c-9b5f-fb2083a8c98d fue de 14155 ms
+2024-10-08 09:10:36 [http-nio-9090-exec-7] INFO  c.a.e.i.rest.PriceController [30b39b1a-338a-444c-9b5f-fb2083a8c98d] - Solicitud con requestId: 30b39b1a-338a-444c-9b5f-fb2083a8c98d procesada exitosamente en 33511 ms. Precio final: 35.50
