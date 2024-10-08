@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=build /app/target/prueba-tecnica-0.0.1-SNAPSHOT.jar /app/prueba-tecnica.jar
 
 # Exponer el puerto en el que se ejecuta la aplicación
-EXPOSE 8080
+EXPOSE 9090
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "prueba-tecnica.jar"]
